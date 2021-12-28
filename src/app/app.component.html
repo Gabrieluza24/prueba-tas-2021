@@ -1,30 +1,36 @@
 <app-menu></app-menu>
 <router-outlet></router-outlet>
 
-<div *ngIf="products!=null; else espera">
-  <table border="1">
-    <tr>
-      <td>Codigo</td>
-      <td>Nombre</td>
-      <td>Precio</td>
-      <td>Disponibilidad</td>
-      <td>Best Seller</td>
-      <td>Categorias</td>
-      <td>Imagen</td>
-      <td>Descripcion</td>
-    </tr>
-    <tr *ngFor="let prod of products.products">
-      <td>{{prod.id}}</td>
-      <td>{{prod.name}}</td>
-      <td>{{prod.price}}</td>
-      <td>{{prod.available}}</td>
-      <td>{{prod.best_seller}}</td>
-      <td>{{prod.categories}}</td>
-      <td>
-        <img src="{{prod.img}}" width="30px" class="img-fluid" alt="{{prod.name}}">
-      </td>
-      <td>{{prod.description}}</td>
-    </tr>
-  </table>
+<!-- Carousel wrapper -->
+<div
+  id="carouselBasicExample"
+  class="carousel slide carousel-fade"
+  data-mdb-ride="carousel"
+>
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-mdb-target="#carouselBasicExample"
+      data-mdb-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+  </div>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <img
+        src="https://www.comparaassist.com/static/banner-home-14f79a6d4d6e10b3a03b6acb50c9e9aa.jpg"
+        class="d-block w-100"
+        alt="Banner"
+      />
+      <div class="carousel-caption d-none d-md-block text-dark">
+        <h4>Bienvenido a la WebApp</h4>
+      </div>
+    </div>
 </div>
-<ng-template #espera>Esperando datos...</ng-template>
+<!-- Carousel wrapper -->
