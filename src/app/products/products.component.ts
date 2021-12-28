@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsComponent implements OnInit {
 
   products: any;
+  categories: any;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -17,6 +19,7 @@ export class ProductsComponent implements OnInit {
     .subscribe(
       resultado => {
         this.products = resultado;
+        this.categories = resultado;
       }
     );
   }
