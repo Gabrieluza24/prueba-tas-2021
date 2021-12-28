@@ -14,6 +14,9 @@ export class ProductsComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  filterProduct ='';
+
+
   ngOnInit() {
     this.http.get("https://my-json-server.typicode.com/TASNETWORK/Prueba-DJunior/db")
     .subscribe(

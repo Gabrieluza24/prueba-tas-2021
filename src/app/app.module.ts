@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductsComponent } from './products/products.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from'@angular/forms';
 
 
 
@@ -15,12 +17,14 @@ import { InicioComponent } from './inicio/inicio.component';
     AppComponent,
     MenuComponent,
     ProductsComponent,
-    InicioComponent
+    InicioComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

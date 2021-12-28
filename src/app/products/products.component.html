@@ -1,9 +1,12 @@
 <body>
+  <div class="container px-4 px-lg-5 mt-5">
+    <input type="text" class="form-control" name="filterProduct" placeholder="Busqueda.." [(ngModel)]="filterProduct">
+  </div>
   <!-- Section-->
   <section class="py-5" *ngIf="products!=null">
     <div class="container px-4 px-lg-5 mt-5">
       <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-        <div class="col mb-5" *ngFor="let prod of products.products">
+        <div class="col mb-5" *ngFor="let prod of products.products | filter:filterProduct">
           <div class="card h-100">
             <!-- Product available-->
             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem" *ngIf="prod.available==true" >Disponible</div>
