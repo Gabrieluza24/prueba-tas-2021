@@ -1,7 +1,8 @@
-<body>
-  <div class="container px-4 px-lg-5 mt-5">
+  <body>
+  <div class="px-4 px-lg-5 mt-2">
     <input type="text" class="form-control" name="filterProduct" placeholder="Busqueda.." [(ngModel)]="filterProduct">
   </div>
+
   <!-- Section-->
   <section class="py-5" *ngIf="products!=null">
     <div class="container px-4 px-lg-5 mt-5">
@@ -18,7 +19,7 @@
                 <!-- Product name-->
                 <h5 class="fw-bolder">{{prod.name}}</h5>
                 <!-- Product price-->
-                {{prod.price}}$ 
+                {{prod.price | currency:'USD'}} 
               </div>
               <div class="text-center">
                 <p>{{prod.description}}</p>
@@ -29,7 +30,7 @@
             </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a>
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto">Agregar al Carrito</a>
                 </div>
               </div>
           </div> 

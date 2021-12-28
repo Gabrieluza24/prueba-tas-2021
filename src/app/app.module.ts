@@ -9,6 +9,9 @@ import { ProductsComponent } from './products/products.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from'@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartComponent } from './cart/cart.component';
+
 
 
 
@@ -18,13 +21,16 @@ import { FormsModule } from'@angular/forms';
     MenuComponent,
     ProductsComponent,
     InicioComponent,
-    FilterPipe
+    FilterPipe,
+    CartComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
